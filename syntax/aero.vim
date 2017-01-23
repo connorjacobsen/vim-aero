@@ -22,7 +22,8 @@ syntax keyword aeroBuiltinTypes bool char int float string
 
 syntax keyword aeroBuiltinFunction print assert
 
-syntax match aeroComment    "\v#.*$"
+syntax match  aeroComment     "\v#.*$"
+syntax region aeroCommentDoc  start="#\["  end="\]#"
 
 syntax match aeroOperator   '!=\|!'
 syntax match aeroOperator   '==\|='
@@ -62,6 +63,7 @@ hi link aeroBuiltinTypes    Type
 hi link aeroBuiltinFunction Function
 hi link aeroBuiltinFunction Function
 hi link aeroComment         Comment
+hi link aeroCommentDoc      Comment
 hi link aeroString          String
 hi link aeroFunCall         Function
 
