@@ -24,20 +24,22 @@ syntax keyword aeroBuiltinFunction print assert
 
 syntax match aeroComment    "\v#.*$"
 
-syntax match aeroOperator   "\v\+\="
-syntax match aeroOperator   "\v\+"
-syntax match aeroOperator   "\v\-\="
-syntax match aeroOperator   "\v\-"
-syntax match aeroOperator   "\v\*\="
-syntax match aeroOperator   "\v\*"
-syntax match aeroOperator   "\v\/\="
-syntax match aeroOperator   "\v\/"
+syntax match aeroOperator   '!=\|!'
+syntax match aeroOperator   '==\|='
+syntax match aeroOperator   '>>\|>=\|>'
+syntax match aeroOperator   '<<\|<=\|<'
+syntax match aeroOperator   '+=\|+'
+syntax match aeroOperator   '-=\|-'
+syntax match aeroOperator   '*=\|*'
+syntax match aeroOperator   '/=\|/'
+syntax match aeroOperator   '%=\|%'
+syntax match aeroOperator   '^=\|^'
+syntax match aeroOperator   '&&\|&=\|&'
+syntax match aeroOperator   '||\||=\||'
+syntax match aeroOperator   '|>'
 
-syntax match aeroOperator   "\v\!\="
-syntax match aeroOperator   "\v\=\="
-syntax match aeroOperator   "\v\="
-
-syntax match aeroNumber     "\v[0-9][0-9]*"
+syntax match aeroNumber     "\v[0-9][0-9_]*"
+syntax match aeroFloat      "\v[0-9][0-9_]*\.[0-9][0-9_]*"
 
 syntax region aeroString start=/\v"/ skip=/\v\\./ end=/\v"/
 
@@ -53,6 +55,7 @@ hi link aeroStruct          Structure
 hi link aeroBoolean         Boolean
 hi link aeroOperator        Operator
 hi link aeroNumber          Number
+hi link aeroFloat           Float
 hi link aeroBuiltinTypes    Type
 hi link aeroBuiltinFunction Function
 hi link aeroBuiltinFunction Function
