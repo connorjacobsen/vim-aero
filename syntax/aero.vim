@@ -22,10 +22,6 @@ syntax keyword aeroBuiltinTypes bool char int float string
 
 syntax keyword aeroBuiltinFunction print assert
 
-syntax region   aeroComment   start="\v#" end="\v$" contains=aeroTodo
-syntax region   aeroComment   start="#\+\[" end="\]#\+" contains=aeroTodo
-syntax keyword  aeroTodo      TODO FIXME XXX contained
-
 syntax match aeroOperator   '!=\|!'
 syntax match aeroOperator   '==\|='
 syntax match aeroOperator   '>>\|>=\|>'
@@ -46,6 +42,10 @@ syntax match aeroFloat      "\v[0-9][0-9_]*\.[0-9][0-9_]*"
 syntax match aeroFuncCall   "\w\(\w\)*("he=e-1,me=e-1
 
 syntax region aeroString start=/\v"/ skip=/\v\\./ end=/\v"/
+
+syntax region   aeroComment   start="\v#" end="\v$" contains=aeroTodo
+syntax region   aeroComment   start="#\+\[" end="\]#\+" contains=aeroTodo
+syntax keyword  aeroTodo      TODO FIXME XXX contained
 
 hi link aeroRepeat          Repeat
 hi link aeroKeyword         Keyword
