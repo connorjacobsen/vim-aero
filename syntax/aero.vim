@@ -23,7 +23,7 @@ syntax keyword aeroBuiltinTypes bool char int float string
 syntax keyword aeroBuiltinFunction print assert
 
 syntax match  aeroComment     "\v\#.*$"
-syntax region aeroCommentDoc  start=/#[/  end=/]#/
+syntax region aeroCommentDoc  start="#["  end="]#"
 
 syntax match aeroOperator   '!=\|!'
 syntax match aeroOperator   '==\|='
@@ -42,7 +42,7 @@ syntax match aeroOperator   '|>'
 syntax match aeroNumber     "\v[0-9][0-9_]*"
 syntax match aeroFloat      "\v[0-9][0-9_]*\.[0-9][0-9_]*"
 
-syntax match aeroFuncCall   "\w\+\("he=e-1,me=e-1
+syntax match aeroFuncCall   "\w\(\w\)*("he=e-1,me=e-1
 
 syntax region aeroString start=/\v"/ skip=/\v\\./ end=/\v"/
 
@@ -65,6 +65,6 @@ hi link aeroBuiltinFunction Function
 hi link aeroComment         Comment
 hi link aeroCommentDoc      Comment
 hi link aeroString          String
-hi link aeroFuncCall         Function
+hi link aeroFunCall         Function
 
 let b:current_syntax = "aero"
