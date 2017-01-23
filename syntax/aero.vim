@@ -22,8 +22,8 @@ syntax keyword aeroBuiltinTypes bool char int float string
 
 syntax keyword aeroBuiltinFunction print assert
 
+syntax region   aeroComment   start="\v#" end="\v$" contains=aeroTodo
 syntax region   aeroComment   start="#\+\[" end="\]#\+" contains=aeroTodo
-syntax region   aeroComment   start="#" end="$" contains=aeroTodo
 syntax keyword  aeroTodo      TODO FIXME XXX contained
 
 syntax match aeroOperator   '!=\|!'
