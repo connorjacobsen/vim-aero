@@ -42,7 +42,7 @@ syntax match aeroOperator   '|>'
 syntax match aeroNumber     "\v[0-9][0-9_]*"
 syntax match aeroFloat      "\v[0-9][0-9_]*\.[0-9][0-9_]*"
 
-syntax match aeroFuncCall   "\w\(\w\)*("he=e-1,me=e-1
+syntax match aeroFuncCall   "\v\w\(\w*\)"
 
 syntax region aeroString start=/\v"/ skip=/\v\\./ end=/\v"/
 
