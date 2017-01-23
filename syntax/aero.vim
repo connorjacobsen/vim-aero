@@ -22,8 +22,8 @@ syntax keyword aeroBuiltinTypes bool char int float string
 
 syntax keyword aeroBuiltinFunction print assert
 
-syntax match  aeroComment     "\v#.*$"
-syntax region aeroCommentDoc  start="#\["  end="\]#"
+syntax match  aeroComment     "\v\#.*$"
+syntax region aeroCommentDoc  start="\#\["  end="\]\#"
 
 syntax match aeroOperator   '!=\|!'
 syntax match aeroOperator   '==\|='
