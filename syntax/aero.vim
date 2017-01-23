@@ -38,10 +38,10 @@ syntax match aeroOperator   '&&\|&=\|&'
 syntax match aeroOperator   '||\||=\||'
 syntax match aeroOperator   '|>'
 
-syntax match aeroIdentifier "\v[a-zA-Z][a-zA-Z0-9_]*"
-
 syntax match aeroNumber     "\v[0-9][0-9_]*"
 syntax match aeroFloat      "\v[0-9][0-9_]*\.[0-9][0-9_]*"
+
+syntax match aeroFuncCall   "\w\(\w\)*("he=e-1,me=e-1
 
 syntax region aeroString start=/\v"/ skip=/\v\\./ end=/\v"/
 
@@ -63,6 +63,6 @@ hi link aeroBuiltinFunction Function
 hi link aeroBuiltinFunction Function
 hi link aeroComment         Comment
 hi link aeroString          String
-hi link aeroIdentifier      Identifier
+hi link aeroFunCall         Function
 
 let b:current_syntax = "aero"
