@@ -46,7 +46,7 @@ syntax region aeroString start=/\v"/ skip=/\v\\./ end=/\v"/
 hi link aeroRepeat          Repeat
 hi link aeroKeyword         Keyword
 hi link aeroType            Keyword
-hi link aeroConfitional     Conditional
+hi link aeroConfitional     Keyword
 hi link aeroLabel           Label
 hi link aeroImport          Include
 hi link aeroTrait           Typedef
