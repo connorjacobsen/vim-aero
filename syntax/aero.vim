@@ -22,7 +22,7 @@ syntax keyword aeroBuiltinTypes bool char int float string
 
 syntax keyword aeroBuiltinFunction print assert
 
-syntax match    aeroComment   /\v#.*/ contains=aeroTodo,@Spell
+syntax match    aeroComment   "#.*$" display contains=aeroTodo,@Spell
 syntax region   aeroComment   start="#\[" end="\]#" contains=aeroTodo,@Spell
 syntax keyword  aeroTodo      TODO FIXME XXX contained
 
